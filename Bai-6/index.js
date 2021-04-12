@@ -21,3 +21,13 @@ $('.btn-delete').click(function(){
   })
   $('.result').val(arr.toString())
 })
+
+$('.btn-left').click(function(){
+  arr.push(arr.shift())
+  $('.result').val(arr.toString())
+})
+
+$('.btn-right').click(function(){
+  arr.unshift(arr.pop())
+  $('.result').val(arr.toString())
+})
