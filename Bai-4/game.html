@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>horse.js</title>
+		<link rel="stylesheet" href="game.css" />
+		<script src="game.js"></script>
+	</head>
+
+	<body>
+
+		<div id="horse1" class="horse standRight">
+			<div class="rider">
+				<div class="head">
+				</div>
+
+				<div class="body">
+				</div>
+			</div>
+		</div>
+
+
+		<div id="horse2" class="horse standRight">
+			<div class="rider">
+				<div class="head">
+				</div>
+
+				<div class="body">
+				</div>
+			</div>
+		</div>
+
+
+		<div id="horse3" class="horse standRight">
+			<div class="rider">
+				<div class="head">
+				</div>
+
+				<div class="body">
+				</div>
+			</div>
+		</div>
+
+
+		<div id="horse4" class="horse standRight">
+			<div class="rider">
+				<div class="head">
+				</div>
+
+				<div class="body">
+				</div>
+			</div>
+		</div>
+
+
+		<div class="track">
+			<div id="startline">
+
+			</div>
+			<div class="inner">
+				<button id="start">
+					Bắt đầu
+				</button>
+
+				<div id="bet">
+					<p>Bạn hiện có <span id="funds">100</span></p>
+					<label>Tiền cược  (£)</label>
+					<!-- keeping value in amount -->
+					<input id="amount" value ="0">
+					<label>Cược vào ngựa:</label>
+					<select id="bethorse">
+						<option value="horse1">Trắng</option>
+						<option value="horse2">Xanh dương</option>
+						<option value="horse3">Xanh lá</option>
+						<option value="horse4">Nâu</option>
+					</select>
+					<!-- adding number of laps -->
+					<label> Số vòng đua: </label>
+					<select id="numberOfLaps" >
+						<!-- option value for number of laps -->
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+				
+			       </select>
+				</div>
+
+				<img src="images/tree.png" class="tree" />
+
+			
+
+			<table id="results">
+				<thead>
+				<tr>
+					<th>Kết quả</th>
+					<th></th>
+				</tr>
+				</thead>
+				<tr>
+					<td>1st</td>
+					<td class="horse1"></td>
+				</tr>
+				<tr>
+					<td>2nd</td>
+					<td class="horse2"></td>
+				</tr>
+				<tr>
+					<td>3rd</td>
+					<td class="horse3"></td>
+				</tr>
+				<tr>
+					<td>4th</td>
+					<td class="horse4"></td>
+				</tr>
+			</table>
+</div>
+
+		</div>
+	</body>
+</html>
