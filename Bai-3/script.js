@@ -70,7 +70,7 @@ function initGame(gameSize) {
       cell.addEventListener('click', function() {
         if(!userMove) { return; } // prevent player from moving during CPU turn
         if(this.innerHTML != "") {
-          alert("Try another spot!");
+          alert("Thử điểm khác!");
           return;
         }
         // determine which marking and set
@@ -85,7 +85,7 @@ function initGame(gameSize) {
         else {
           // if someone has won the game, alert and start new game
           if(gameStatus() == "Tie") { alert("Tie game."); }
-          else { alert(gameStatus() + " has won!"); }
+          else { alert(gameStatus() + " đã thắng!"); }
           clearGame();
         }
 
