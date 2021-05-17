@@ -1,15 +1,24 @@
-var string = $('#container').html()
+var ballWidth = $("#ball").width();
+var ballHeight = $("#ball").height();
 
-$('#btn-find').on('click', (e)=>{
-  var findString = $('#txt-find').val()
-  var replaceString = $('#txt-replace').val()
+var dx = 10;
+var dy = 10;
 
-  if($('#rd-capitalize:checked').val())
-  return $('#container').html($('#container').html().replace(new RegExp(findString,'g'), replaceString))
+$(document).ready(function () {
+  setInterval(() => {
+    play();
+  }, 100);
+});
 
-  $('#container').html($('#container').html().replace(new RegExp(findString,'gi'), replaceString))
-})
+function play() {
+  var ballLeft = parseInt($("#ball").css("left"));
+  var ballTop = parseInt($("#ball").css("top"));
 
-$('#btn-reset').on('click', (e)=>{
-  $('#container').html(string)
-})
+  var width = $("#container").width();
+  var height = $("#container").height();
+
+  if (ballLeft < 0 || ballLeft + ballWidth >= width) dx = -dx;
+  if (ballTop < 0 || ballTop + ballHeight >= height) dy = -dy;
+  $("#ball").css("left", `${ballLeft + dx}px`);
+  $("#ball").css("top", `${ballTop + dy}px`);
+}
